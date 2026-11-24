@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS equipment (
 CREATE TABLE IF NOT EXISTS change_requests (
     number INTEGER PRIMARY KEY AUTOINCREMENT,
     booking_id TEXT NOT NULL,
-    new_class_id TEXT NOT NULL,
+    new_value TEXT NOT NULL,
     status TEXT NOT NULL DEFAULT 'waiting'
 );
 
