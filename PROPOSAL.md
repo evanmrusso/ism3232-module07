@@ -30,7 +30,7 @@ Each tool only reads its one table. Every tool also refuses an ID the member nev
 ## Change tool (at least one)      
 request_session_move(booking_id, new_session_id): Ask staff to move one booking to a different session. Staff must approve it. Approving sets bookings.session_id to the new value, adds 1 to the old sessions's spots_left, subtracts 1 from the new sessions's spots_left, and marks the request approved 
 ## Handoff rule                    
-Words: injury, pain, medical, consussion, capsized, overboard. 
+Words: injury, pain, medical, concussion, capsized, overboard. 
 
 The rule runs in code before the model sees the message. If a member's message contains any of these words, the agent skips the model and tools and replies: "This needs a staff member. Please contact the Iron Beast Athletics front desk right away."
 

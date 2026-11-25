@@ -79,11 +79,11 @@ class IronBeastTools:
         return "No equipment was found. Sports include rowing, volleyball."
 
     def request_session_move(self, booking_id, new_session_id):
-        """Ask staff to change the session for a booking. Staff must approve it.
+        """Ask staff to move one booking to a different session. Use this when a member wants to switch sessions. Staff must approve it.
 
         Args:
             booking_id: The booking ID, like B500.
-            new_session_id: The ID of the new session.
+            new_session_id: The ID of the new session, like S12.
         """
         booking_id = booking_id.upper()
         new_session_id = new_session_id.upper()
@@ -95,7 +95,7 @@ class IronBeastTools:
         return f"Request {number} was sent to staff. The session has not changed yet."
 
     def check_request(self, number):
-        """Check what staff decided about one session change request.
+        """Check the status of a move request that was already filed. Use this only when the member gives a request number.
 
         Args:
             number: The request number, like 3.
